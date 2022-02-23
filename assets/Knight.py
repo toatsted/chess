@@ -6,15 +6,17 @@ class Knight(Piece):
         super().__init__(pos, color)
 
     def findMoves(self):
+        y = self.pos[0]
+        x = self.pos[1]
         moves = [
-                [self.pos[0] - 2, self.pos[1] + 1],
-                [self.pos[0] - 2, self.pos[1] - 1],
-                [self.pos[0] + 2, self.pos[1] + 1],
-                [self.pos[0] + 2, self.pos[1] - 1],
-                [self.pos[0] - 1, self.pos[1] + 2],
-                [self.pos[0] - 1, self.pos[1] - 2],
-                [self.pos[0] + 1, self.pos[1] + 2],
-                [self.pos[0] + 1, self.pos[1] - 2]
+                [y - 2, x + 1],
+                [y - 2, x - 1],
+                [y + 2, x + 1],
+                [y + 2, x - 1],
+                [y - 1, x + 2],
+                [y - 1, x - 2],
+                [y + 1, x + 2],
+                [y + 1, x - 2]
             ]
         for move in moves:
             if self.checkLegalMove(move):

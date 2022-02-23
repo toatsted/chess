@@ -2,6 +2,7 @@ from assets.Board import Board, board
 from assets.Piece import Piece
 from assets.Pawn import Pawn
 from assets.Knight import Knight
+from assets.King import King
 
 WHITE = True
 BLACK = False
@@ -17,6 +18,7 @@ def main():
     board.pieces['P8'] = Pawn([6, 7], WHITE)
     board.pieces['N1'] = Knight([7, 2], WHITE)
     board.pieces['N2'] = Knight([7, 5], WHITE)
+    board.pieces['K1'] = King([7, 4], WHITE)
 
     board.pieces['p1'] = Pawn([1, 0], BLACK)
     board.pieces['p2'] = Pawn([1, 1], BLACK)
@@ -28,6 +30,7 @@ def main():
     board.pieces['p8'] = Pawn([1, 7], BLACK)
     board.pieces['n1'] = Knight([0, 2], BLACK)
     board.pieces['n2'] = Knight([0, 5], BLACK)
+    board.pieces['K1'] = King([0, 4], BLACK)
 
     board.display()
 
