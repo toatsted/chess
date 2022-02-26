@@ -30,7 +30,9 @@ def main():
     board.pieces['p8'] = Pawn([1, 7], BLACK)
     board.pieces['n1'] = Knight([0, 2], BLACK)
     board.pieces['n2'] = Knight([0, 5], BLACK)
-    board.pieces['K1'] = King([0, 4], BLACK)
+    board.pieces['k1'] = King([0, 4], BLACK)
+
+
 
     board.display()
 

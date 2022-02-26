@@ -16,4 +16,7 @@ class Piece:
 
     def checkLegalMove(self, move):
         if not move[0] < 0 and not move[0] > 7 and not move[1] < 0 and not move[1] > 7:
+            for piece in board.pieces:
+                if board.pieces[piece].pos == move:
+                    return False
             return True
